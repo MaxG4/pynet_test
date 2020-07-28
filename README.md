@@ -1,2 +1,2 @@
 # pynet_test
-Pythong for network engineers class
+Python for network engineers class
