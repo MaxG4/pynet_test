@@ -6,10 +6,9 @@ from netmiko import ConnectHandler
 def netmio_show(device_dict):
     net_connect = ConnectHandler(**device_dict)
     print(net_connect.find_prompt())
-    return 
+    return
 
 if __name__ == "__main__":
-    main()
 
     yaml_file = "devices.yml"
     with open(yaml_file) as f:
@@ -25,16 +24,13 @@ if __name__ == "__main__":
     futures = []
 
 # submit work for thread pool
-    for devices in device_list
-        device_dict = devices[device]
-        # netmiko_show(device_list)
-        futures.append(pool.submit(netmiko_show, (device_dict)))
+for devices in device_list
+device_list = devices[device]
 
-# wait till task as 
-        wait(futures)
-        for task_result in futures:
-            print(task_result.result())
-        
+# netmiko_show(device_list)
+futures.append(pool.submit(netmiko_show, (device_dict)))
 
-
-
+# wait till task as
+wait(futures)
+for task_result in futures:
+    print(task_result.result())
