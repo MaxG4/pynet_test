@@ -3,6 +3,7 @@ from nornir import InitNornir
 nr = InitNornir(config_file="./config.yaml")
 
 sros1 = nr.inventory.hosts["sros1"]
+
 print()
 print(f"Name: {sros1.name}")
 print(f"Host: {sros1.hostname}")
